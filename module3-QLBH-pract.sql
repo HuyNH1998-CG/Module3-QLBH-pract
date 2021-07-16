@@ -18,8 +18,8 @@ productname nvarchar(45),
 priductprice int
 );
 create table orderdetail(
-orderid int not null ,
-productid int not null ,
+orderid int not null primary key,
+productid int not null primary key,
 orderquantity int,
 foreign key (orderid) references saleorder(orderid),
 foreign key (productid) references product(productid)
